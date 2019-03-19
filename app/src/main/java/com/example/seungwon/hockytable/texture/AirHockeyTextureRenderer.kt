@@ -10,7 +10,7 @@ import com.example.seungwon.hockytable.R
 import com.example.seungwon.hockytable.utils.TextureHelper
 import javax.microedition.khronos.opengles.GL10
 
-class AirHockeyRenderer(private val context: Context) : GLSurfaceView.Renderer {
+class AirHockeyTextureRenderer(private val context: Context) : GLSurfaceView.Renderer {
     private val projectionMatrix = FloatArray(16)
     private val modelMatrix = FloatArray(16)
 
