@@ -5,26 +5,18 @@ import android.opengl.GLES20
 import android.opengl.GLES20.glGetAttribLocation
 import android.opengl.GLES20.glGetUniformLocation
 import com.example.seungwon.hockytable.R
-import com.example.seungwon.hockytable.R.raw.simple_fragment_shader
-import com.example.seungwon.hockytable.R.raw.simple_vertex_shader
 
 
-class ColorShaderProgram(context: Context)
-    : ShaderProgram(context, R.raw.simple_vertex_shader, R.raw.simple_fragment_shader) {
+class ColorShaderProgram(context: Context) :
+    ShaderProgram(context, R.raw.simple_vertex_shader, R.raw.simple_fragment_shader) {
     // Uniform locations
-    private val uMatrixLocation: Int
+    // Retrieve uniform locations for the shader program.
+    private val uMatrixLocation: Int = glGetUniformLocation(program, U_MATRIX)
 
     // Attribute locations
-    val positionAttributeLocation: Int
-    val colorAttributeLocation: Int
-
-    init {
-        // Retrieve uniform locations for the shader program.
-        uMatrixLocation = glGetUniformLocation(program, U_MATRIX)
-        // Retrieve attribute locations for the shader program.
-        positionAttributeLocation = glGetAttribLocation(program, A_POSITION)
-        colorAttributeLocation = glGetAttribLocation(program, A_COLOR)
-    }
+    // Retrieve attribute locations for the shader program.
+    val positionAttributeLocation: Int = glGetAttribLocation(program, A_POSITION)
+    val colorAttributeLocation: Int = glGetAttribLocation(program, A_COLOR)
 
     fun setUniforms(matrix: FloatArray) {
         // Pass the matrix into the shader program.

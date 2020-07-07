@@ -6,6 +6,7 @@ import android.opengl.GLSurfaceView
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
+import com.example.seungwon.hockytable.threed.model.AirHockeyTable3dPuckRenderer
 
 class MainActivity : AppCompatActivity() {
     private var glSurfaceView: GLSurfaceView? = null
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             glSurfaceView?.setEGLContextClientVersion(2)
 
             // Assign our renderer.
-            glSurfaceView?.setRenderer(AirHockeyMatrixRenderer(this))
+            glSurfaceView?.setRenderer(AirHockeyTable3dPuckRenderer(this))
             rendererSet = true
         } else {
             Toast.makeText(this, "This device does not support OpenGL ES 2.0.",

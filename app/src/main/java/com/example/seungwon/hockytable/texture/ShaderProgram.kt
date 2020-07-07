@@ -9,6 +9,7 @@ open class ShaderProgram(context: Context, vertexShaderResourceId: Int,
                          fragmentShaderResourceId: Int) {
     // Uniform constants
     protected val U_MATRIX = "u_Matrix"
+    protected val U_COLOR = "u_Color"
     protected val U_TEXTURE_UNIT = "u_TextureUnit"
 
     // Attribute constants
