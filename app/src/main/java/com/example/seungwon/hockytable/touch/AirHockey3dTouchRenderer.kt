@@ -121,7 +121,10 @@ class AirHockey3dTouchRenderer(private val context: Context) : GLSurfaceView.Ren
             modelViewProjectionMatrix, 0, viewProjectionMatrix,
             0, modelMatrix, 0
         )
-    }
+
+
+
+
 
     private fun convertNormalized2DPointToRay(
         normalizedX: Float, normalizedY: Float
