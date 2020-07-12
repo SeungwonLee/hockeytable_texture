@@ -10,7 +10,7 @@ import com.example.seungwon.hockytable.utils.Geometry.Cylinder
 class Puck(radius: Float, height: Float, numPointsAroundPuck: Int) {
     val height: Float
 
-    private val radius: Float
+    val radius: Float
     private val vertexArray: VertexArray
     private val drawList: List<DrawCommand>
 

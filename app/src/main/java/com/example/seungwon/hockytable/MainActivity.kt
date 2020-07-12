@@ -6,7 +6,7 @@ import android.opengl.GLSurfaceView
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
-import com.example.seungwon.hockytable.threed.model.AirHockeyTable3dPuckRenderer
+import com.example.seungwon.hockytable.threed.AirHockeyTable3dPuckRenderer
 
 class MainActivity : AppCompatActivity() {
     private var glSurfaceView: GLSurfaceView? = null

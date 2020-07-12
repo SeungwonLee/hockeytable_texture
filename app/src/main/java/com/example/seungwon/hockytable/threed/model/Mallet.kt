@@ -7,22 +7,19 @@ import com.example.seungwon.hockytable.utils.Geometry
 
 
 class Mallet(
-    radius: Float,
-    height: Float,
-    numPointsAroundMallet: Int
+        val radius: Float,
+        val height: Float,
+        numPointsAroundMallet: Int
 ) {
-    val radius = 0f
-    val height = 0f
-
     private var vertexArray: VertexArray? = null
     private var drawList: List<DrawCommand>? = null
 
     init {
         val (vertexData, localDrawList) = ObjectBuilder.createMallet(
-            Geometry.Point(
-                0f,
-                0f, 0f
-            ), radius, height, numPointsAroundMallet
+                Geometry.Point(
+                        0f,
+                        0f, 0f
+                ), radius, height, numPointsAroundMallet
         )
         vertexArray = VertexArray(vertexData)
         drawList = localDrawList
@@ -30,9 +27,9 @@ class Mallet(
 
     fun bindData(colorProgram: ColorShaderProgram) {
         vertexArray?.setVertexAttribPointer(
-            0,
-            colorProgram.positionAttributeLocation,
-            POSITION_COMPONENT_COUNT, 0
+                0,
+                colorProgram.positionAttributeLocation,
+                POSITION_COMPONENT_COUNT, 0
         )
     }
 

@@ -1,4 +1,4 @@
-package com.example.seungwon.hockytable.threed.model
+package com.example.seungwon.hockytable.threed
 
 import android.R
 import android.content.Context
@@ -11,7 +11,8 @@ import android.opengl.Matrix.setLookAtM
 import com.example.seungwon.hockytable.texture.MatrixHelper.perspectiveM
 import com.example.seungwon.hockytable.texture.Table
 import com.example.seungwon.hockytable.texture.TextureShaderProgram
-import com.example.seungwon.hockytable.threed.ColorShaderProgram
+import com.example.seungwon.hockytable.threed.model.Mallet
+import com.example.seungwon.hockytable.threed.model.Puck
 import com.example.seungwon.hockytable.utils.TextureHelper.loadTexture
 import javax.microedition.khronos.opengles.GL10
 
